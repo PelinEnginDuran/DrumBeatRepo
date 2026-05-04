@@ -112,7 +112,7 @@ export class SequencerComponent implements OnInit, OnDestroy {
     drums.sort((a: Track, b: Track) => {
       const aMidi = Option.getOrElse(a.midiNote, ()=>0);
       const bMidi = Option.getOrElse(b.midiNote, ()=>0);
-      return (bMidi as number) - (aMidi as number);
+      return bMidi - aMidi;
 
     });
 
